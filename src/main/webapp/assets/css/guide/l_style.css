@@ -1,0 +1,289 @@
+/*
+1. General
+**********************************************************************/
+ body {
+    font-family:'Roboto', sans-serif;
+    color: #FFF;
+    line-height:1.2em;
+    font-size:17px;
+    line-height:20px;
+}
+a {
+    color:#181A1C;
+    text-decoration: none;
+}
+a:hover {
+    color: #FECE1A;
+    text-decoration:none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+h1 {
+    margin: 10px;
+}
+p {
+    padding: 10px;
+    font-weight: 100;
+    color: #fff;
+}
+.nav2bar2 {
+    background: #181A1C;
+    margin-bottom:0;
+    min-height:70px;
+}
+
+.nav2bar2-fixed-top {
+    min-height:60px;
+    height:60px;
+    padding-top:0;
+}
+.nav2bar2-inner {
+    background: #181A1C;
+    border-radius:0;
+    filter: none;
+    border: none;
+    box-shadow: none;
+}
+.nav2bar2 .brand img {
+    width:120px;
+    height:40px;
+}
+.nav2bar2 .nav2 > li > a {
+    text-transform:uppercase;
+    line-height: auto;
+    vertical-align: middle;
+    margin:10px 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border: 1px solid #181A1C;
+    box-shadow: none;
+    font-size:15px;
+    text-shadow: none;
+    color: #fff;
+    transition: border-color 1s ease;
+}
+.nav2bar2 .nav2 > li:hover> a, .nav2bar2 .nav2 > .active > a, .nav2bar2 .nav2 > .active > a:hover, .nav2bar2 .nav2 > .active > a:focus {
+    border: 1px solid #FECE1A;
+    color: #fff;
+    background-color: #181A1C;
+    transition: border-color 1s ease;
+}
+.nav2-pills {
+    margin-bottom: 30px;
+}
+.nav2-pills > li > a {
+    background: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-right:5px;
+    padding-left:25px;
+    padding-right:25px;
+    border: 1px solid #181A1C;
+}
+.nav2-pills > li > a:hover, .nav2-pills > .active > a, .nav2-pills > .active > a:hover, .nav2-pills > .active > a:focus {
+    background: #181A1C;
+    color: #fff;
+}
+.nav2bar2 .btn-nav2bar2:hover, .nav2bar2 .btn-nav2bar2 {
+    border-radius:0;
+    background:#FECE1A;
+    color: #000;
+}
+
+
+/*
+2.3 Thumbnails - Predefined bootstrap's thumbnail class.
+**********/
+ .thumbnail {
+    width:100%;
+    height:100%;
+    padding:0;
+    overflow: hidden;
+    position: relative;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    text-align:center;
+    background: #191a1c;
+}
+
+.span4 {
+	width:360px;
+	height:500px;
+}
+
+.viewImage {
+	width:400px;
+	height:400px;
+}
+
+
+.thumbnail .more {
+    display:block;
+    z-index:4;
+    position:absolute;
+    top:-100px;
+    left:50%;
+    margin:0 auto;
+    margin-left:-41px;
+    width:80px;
+    height:80px;
+    font-size:40px;
+    color:#fff;
+    text-decoration:none;
+    line-height: 70px;
+    text-align: center;
+}
+
+.thumbnail:hover .more {
+    top:40%;
+    margin-top:-40px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3 s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.thumbnail h3, 
+.thumbnail p {
+    margin:0;
+    padding:0;
+    position:relative;
+    z-index:4;
+}
+.thumbnail h3 {
+    color: #FECE1A;
+    margin-top:10px;
+    font-size:20px;
+}
+.thumbnail > p {
+    padding-bottom:20px;
+}
+
+.thumbnail .mask {
+    opacity:0.85;
+    filter: alpha(opacity=85);
+    top:100%;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#181A1C;
+    position:absolute;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2 s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.thumbnail:hover .mask {
+    top:0;
+}
+
+.mask {
+padding-top:170px;; 
+font-size:40px;
+
+}
+
+
+/*
+3. Sections 
+***************************************************************************/
+ .section {
+    padding-bottom: 50px;
+}
+.section .container {
+    padding-top:50px;
+}
+
+.section .title {
+    text-align: center;
+    padding:10px;
+    margin-bottom: 30px;
+}
+
+.section .title h1 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    padding: 0;
+}
+.section .title > p {
+    font-size: 20px;
+    color: #FFF;
+    font-weight: lighter;
+}
+
+/* 배경 색 조정 */
+.secondary-section {
+    background: #ece6cc; 
+}
+
+/* 상단 텍스트 컬러 */
+.secondary-section .title {
+    border-bottom: 1px solid #181A1C;
+}
+.secondary-section h1, .secondary-section .title p {
+    color: #181A1C;
+}
+
+#portfolio-grid .mix {
+    opacity: 0;
+    display: none;
+}
+
+/* 축제 테이블 style */
+.festival-table  {
+  width: 100%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+  vertical-align: center;
+
+}
+
+
+td {
+  text-align: center;
+  vertical-align: center;
+   
+}
+
+.title-cell {
+  width: 200px;
+  height: 60px;
+  font-size: 15px;
+  border-bottom:1px solid black;
+  border-right:1px solid black;
+}
+
+.image-cell{
+  width: 200px;
+  border-bottom:1px solid black;
+   border-right:1px solid black;
+}
+
+.date-cell {
+  width: 200px;
+  border-bottom:1px solid black;
+   border-right:1px solid black;
+}
+
+.content-cell {
+  width: 200px;
+  height: 200px;
+  border-bottom:1px solid black;
+   border-right:1px solid black;
+}
+
+.loc-cell {
+  width: 200px;
+  height: 65px;
+  border-bottom:1px solid black;
+   border-right:1px solid black;
+}
+
+
