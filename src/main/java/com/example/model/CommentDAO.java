@@ -33,7 +33,7 @@ public class CommentDAO {
 		return flag;
 	}
 
-	// tip 게시판 댓글 삭제 로직
+	// tip 게시판 댓글 삭제
 	public int tip_commentDelete(CommentTO to) {
 
 		int flag = 1;
@@ -46,7 +46,7 @@ public class CommentDAO {
 		return flag;
 	}
 
-	// tip 게시판 댓글 수정 로직
+	// tip 게시판 댓글 수정
 	public int tip_commentModify(CommentTO to) {
 
 		int flag = 1;
@@ -57,6 +57,11 @@ public class CommentDAO {
 		}
 
 		return flag;
+	}
+
+	// Tip 게시판 게시글 삭제시 댓글도 같이 삭제
+	public void tip_BoardCommentDelete(String tipId) {
+		mapper.tip_BoardCommentDelete(tipId);
 	}
 
 	// Review 게시판 댓글
@@ -76,7 +81,7 @@ public class CommentDAO {
 		return flag;
 	}
 
-	// Review 게시판 댓글 삭제 로직
+	// Review 게시판 댓글 삭제
 	public int review_commentDelete(CommentTO to) {
 
 		int flag = 1;
@@ -89,7 +94,7 @@ public class CommentDAO {
 		return flag;
 	}
 
-	// Review 게시판 댓글 수정 로직
+	// Review 게시판 댓글 수정
 	public int review_commentModify(CommentTO to) {
 
 		int flag = 1;
@@ -102,7 +107,12 @@ public class CommentDAO {
 		return flag;
 	}
 
-	// qna 게시판 로직
+	// Tip 게시판 게시글 삭제시 댓글도 같이 삭제
+	public void review_BoardCommentDelete(String reviewId) {
+		mapper.review_BoardCommentDelete(reviewId);
+	}
+
+	// qna 게시판
 	public ArrayList<CommentTO> qna_CommentList(int qnaId) {
 		return mapper.qna_CommentList(qnaId);
 	}
@@ -119,7 +129,7 @@ public class CommentDAO {
 		return flag;
 	}
 
-	// qna 게시판 댓글 삭제 로직
+	// qna 게시판 댓글 삭제
 	public int qna_commentDelete(CommentTO to) {
 
 		int flag = 1;
@@ -132,7 +142,7 @@ public class CommentDAO {
 		return flag;
 	}
 
-	// qna 게시판 댓글 수정 로직
+	// qna 게시판 댓글 수정
 	public int qna_commentModify(CommentTO to) {
 
 		int flag = 1;
@@ -143,5 +153,10 @@ public class CommentDAO {
 		}
 
 		return flag;
+	}
+
+	// qna 게시판 게시글 삭제시 댓글도 같이 삭제
+	public void qna_BoardCommentDelete(String qnaId) {
+		mapper.qna_BoardCommentDelete(qnaId);
 	}
 }

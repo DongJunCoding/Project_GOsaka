@@ -55,7 +55,7 @@ public class KakaoService {
 			// 토큰받기 요청이 지원하는 인증 유형
 			sb.append("grant_type=authorization_code");
 			// 본인의 key
-			sb.append("&client_id=aa90530c73e117df22ccaa129bd66135");
+			sb.append("&client_id=0767c014385fb16983a7e7360b3ae158");
 			// 설정한 redirect_uri
 			sb.append("&redirect_uri=http://localhost:8080/kakao/callback");
 			// 인가코드

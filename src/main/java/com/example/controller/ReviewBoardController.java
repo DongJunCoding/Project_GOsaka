@@ -52,7 +52,7 @@ public class ReviewBoardController {
 		return modelAndView;
 	}
 
-	// Review 게시판 쓰기 작성 후 글쓰기 눌렀을 때 처리하는 로직
+	// Review 게시판 쓰기 작성 후 글쓰기 눌렀을 때 처리하는  
 	@RequestMapping("/reviewBoardWrite_ok.do")
 	public ModelAndView reviewBoard_Write(HttpServletRequest request,
 			@RequestParam("upload") List<MultipartFile> uploads) {
@@ -189,22 +189,25 @@ public class ReviewBoardController {
 		return modelAndView;
 	}
 
-	// Tip 게시판 게시글 삭제
+	// Review 게시판 게시글 삭제
 	@RequestMapping("/reviewBoardViewDelete_ok.do")
 	public ModelAndView tipBoardViewDelete_ok(HttpServletRequest request) {
 
+		String reviewId = request.getParameter("reviewId");
+		
 		ReviewBoardTO to = new ReviewBoardTO();
-		to.setReviewId(request.getParameter("reviewId"));
+		to.setReviewId(reviewId);
 
 		int flag = rdao.reviewBoardViewDelete(to);
-
+		cdao.review_BoardCommentDelete(reviewId);
+		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("reviewBoard/reviewBoardViewDelete_ok");
 		modelAndView.addObject("flag", flag);
 		return modelAndView;
 	}
 
-	// Tip 게시판 게시글 수정 페이지
+	// Review 게시판 게시글 수정 페이지
 	@RequestMapping("/reviewBoardModify.do")
 	public ModelAndView reviewBoardModify(HttpServletRequest request) {
 
@@ -227,7 +230,7 @@ public class ReviewBoardController {
 		return modelAndView;
 	}
 
-	// Tip 게시판 게시글 수정 로직
+	// Review 게시판 게시글 수정  
 	@RequestMapping("/reviewBoardModify_ok.do")
 	public ModelAndView reviewBoardModify_ok(HttpServletRequest request,
 			@RequestParam("upload") List<MultipartFile> uploads) {

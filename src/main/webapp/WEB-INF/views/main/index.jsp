@@ -427,10 +427,12 @@ int totalFesList = fesList.size();
                                     <div class="head_title">
                                         <h2 class="text-uppercase">GOsaka <strong>개발진</strong></h2>
                                     </div>
-                                    <p>오사카 여행을 가고 싶었지만 홈페이지를 만드느라 가지 못하고 상상여행만 해버린 불쌍한 개발진들입니다.</p>
-                                    <p>잘생겼다 ~~ 휘 ~ 휘 ~ </p>
-
-
+                                    <p>안녕하세요 GOsaka홈페이지 개발자 이동준, 이준영 입니다.
+                                    저희는 오사카 및 근교의 여행 정보를 제공하고 있습니다.</p>
+                                    <p>저희 사이트를 이용하여 많은 정보를 얻어가며, 사용자간의 정보를 공유함으로써 더 많은 정보를 얻을 수 있도록 만들었습니다.
+                                    많은 관심 부탁드립니다.</p>
+                                    <p>건의사항이나 궁금하신 사항이 있으시면 Q&A 게시판 또는 이메일을 통해 문의해주시면 감사하겠습니다.</p>
+                                    <p>감사합니다.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -440,23 +442,13 @@ int totalFesList = fesList.size();
                                             <img src="assets/images/dongjun.jpg" alt="" class="img-circle" />
                                             <h4 class="m-top-20">Lee <strong>Dong-jun</strong></h4>
                                             <h5>CEO</h5>
-                                            <div class="separator"></div>
-                                            <ul class="list-inline">
-                                                <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href=""><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
+                                            <div class="separator"></div>                                           
                                         </div><!-- End off col-md-4 -->
                                         <div class="col-sm-4">
                                             <img src="assets/images/junyoung.jpg" alt="" class="img-circle" />
                                             <h4 class="m-top-20">Lee <strong>Jun-young</strong></h4>
                                             <h5>CEO</h5>
-                                            <div class="separator"></div>
-                                            <ul class="list-inline">
-                                                <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href=""><i class="fa fa-dribbble"></i></a></li>
-                                            </ul>
+                                            <div class="separator"></div>                                           
                                         </div><!-- End off col-md-4 -->
                                     </div>
                                 </div>
