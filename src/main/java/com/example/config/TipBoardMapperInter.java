@@ -30,7 +30,7 @@ public interface TipBoardMapperInter {
 	
 	/* Tip Board List 검색 + twriter SearchKey */
 	@Select("select tipId, tsubject, twriter, tdate, thit, ip from tip_board where twriter like concat('%', #{searchWord}, '%') order by tipId desc")
-	public ArrayList<TipBoardTO> writerSearchList( String searchWord);
+	public ArrayList<TipBoardTO> writerSearchList(String searchWord);
 	
 	/* Tip Board List 검색 + tcontent SearchKey */
 	@Select("select tipId, tsubject, twriter, tdate, thit, ip from tip_board where tcontent like concat('%', #{searchWord}, '%') order by tipId desc")

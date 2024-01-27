@@ -27,7 +27,7 @@ public class KakaoLoginController {
 	// 카카오로그인
 	@RequestMapping("kakao/callback")
 	public ModelAndView kakaoLogin(@RequestParam("code") String code, HttpServletRequest request) {
-		
+		System.out.println(code);
 		// 인가코드를 통해 받아온 토큰 ks.getAccessToken(code)에서 받아옴
 		String accessToken = ks.getAccessToken(code);
 		

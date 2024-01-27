@@ -195,12 +195,15 @@ public class QnaBoardController {
 	// QNA 게시판 게시글 삭제
 	@RequestMapping("/qnaBoardViewDelete_ok.do")
 	public ModelAndView qnaBoardViewDelete_ok(HttpServletRequest request) {
-
+		
+		String qnaId = request.getParameter("qnaId");
+		
 		QnaBoardTO to = new QnaBoardTO();
-		to.setQnaId(request.getParameter("qnaId"));
+		to.setQnaId(qnaId);
 
 		int flag = qdao.qnaBoardViewDelete(to);
-
+		cdao.qna_BoardCommentDelete(qnaId);
+		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("qnaBoard/qnaBoardViewDelete_ok");
 		modelAndView.addObject("flag", flag);

@@ -45,10 +45,8 @@ public class TipBoardController {
 		if (!uploads.get(0).isEmpty()) {
 			for (MultipartFile upload : uploads) {
 
-				String extension = upload.getOriginalFilename()
-						.substring(upload.getOriginalFilename().lastIndexOf(".")); // . 이후의 확장자 이름
-				String filename = upload.getOriginalFilename().substring(0,
-						upload.getOriginalFilename().lastIndexOf(".")); // 0번째부터 . 위치번째까지의 이름부분
+				String extension = upload.getOriginalFilename().substring(upload.getOriginalFilename().lastIndexOf(".")); // . 이후의 확장자 이름
+				String filename = upload.getOriginalFilename().substring(0, upload.getOriginalFilename().lastIndexOf(".")); // 0번째부터 . 위치번째까지의 이름부분
 				String newfilename = filename + "-" + System.currentTimeMillis() + extension;
 				try {
 					upload.transferTo(new File(newfilename)); // 업로드된 파일을 서버의 파일 시스템에 저장하는 역할
@@ -196,11 +194,14 @@ public class TipBoardController {
 	@RequestMapping("/tipBoardViewDelete_ok.do")
 	public ModelAndView tipBoardViewDelete_ok(HttpServletRequest request) {
 
+		String tipId = request.getParameter("tipId");
+		
 		TipBoardTO to = new TipBoardTO();
-		to.setTipId(request.getParameter("tipId"));
+		to.setTipId(tipId);	
 
 		int flag = bdao.tipBoardViewDelete(to);
-
+		cdao.tip_BoardCommentDelete(tipId);
+		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("tipBoard/tipBoardViewDelete_ok");
 		modelAndView.addObject("flag", flag);

@@ -267,7 +267,7 @@ $(document).ready(function() {
 													<a href="/findLogin.do" class="link">Forgot your password?</a>
 												</p>
 												<br>
-												<a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=aa90530c73e117df22ccaa129bd66135&redirect_uri=http://localhost:8080/kakao/callback">
+												<a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=0767c014385fb16983a7e7360b3ae158&redirect_uri=http://localhost:8080/kakao/callback">
 													<img src="assets/images/kakao_login2.png">
 												</a>												
 											</div>

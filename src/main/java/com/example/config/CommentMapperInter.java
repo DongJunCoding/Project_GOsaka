@@ -16,59 +16,67 @@ public interface CommentMapperInter {
 	@Select("select cmId, pcmId, cwriter, ccontent, cdate from tip_comment where pcmId = #{tipId}")
 	public ArrayList<CommentTO> tip_CommentList(int tipId);
 
-	// Tip 게시판 댓글 삽입 로직
+	// Tip 게시판 댓글 삽입
 	@Insert("insert into tip_comment values(0, #{pcmId}, #{cwriter}, #{ccontent}, now() )")
 	@Options(useGeneratedKeys = true, keyProperty = "cmId")
 	public int tip_commentOK(CommentTO to);
 
-	// Tip 게시판 댓글 삭제 로직
+	// Tip 게시판 댓글 삭제
 	@Delete("delete from tip_comment where pcmId=#{pcmId} and cmId=#{cmId}")
 	public int tip_commentDelete(CommentTO to);
 
-	// Tip 게시판 댓글 수정 로직
+	// Tip 게시판 댓글 수정
 	@Update("update tip_comment set ccontent=#{ccontent} where pcmId=#{pcmId} and cmId=#{cmId}")
 	public int tip_commentModify(CommentTO to);
 
-	
+	// Tip 게시판 게시글 삭제시 댓글도 같이 삭제 (tipId == pcmId)
+	@Delete("delete from tip_comment where pcmId=#{pcmId}")
+	public void tip_BoardCommentDelete(String tipId);
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	
 	// Review 게시판 댓글 리스트
 	@Select("select cmId, pcmId, cwriter, ccontent, cdate from review_comment where pcmId = #{reviewId}")
 	public ArrayList<CommentTO> review_CommentList(int reviewId);
 
-	// Review 게시판 댓글 삽입 로직
+	// Review 게시판 댓글 삽입
 	@Insert("insert into review_comment values(0, #{pcmId}, #{cwriter}, #{ccontent}, now() )")
 	@Options(useGeneratedKeys = true, keyProperty = "cmId")
 	public int review_commentOK(CommentTO to);
 
-	// Review 게시판 댓글 삭제 로직
+	// Review 게시판 댓글 삭제
 	@Delete("delete from review_comment where pcmId=#{pcmId} and cmId=#{cmId}")
 	public int review_commentDelete(CommentTO to);
 
-	// Review 게시판 댓글 수정 로직
+	// Review 게시판 댓글 수정
 	@Update("update review_comment set ccontent=#{ccontent} where pcmId=#{pcmId} and cmId=#{cmId}")
 	public int review_commentModify(CommentTO to);
 
-	
+	// Review 게시판 게시글 삭제시 댓글도 같이 삭제 (reviewId == pcmId)
+	@Delete("delete from review_comment where pcmId=#{pcmId}")
+	public void review_BoardCommentDelete(String reviewId);
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	
 	// qna 게시판 댓글 리스트
 	@Select("select cmId, pcmId, cwriter, ccontent, cdate from qna_comment where pcmId = #{qnaId}")
 	public ArrayList<CommentTO> qna_CommentList(int qnaId);
 
-	// qna 게시판 댓글 삽입 로직
+	// qna 게시판 댓글 삽입
 	@Insert("insert into qna_comment values(0, #{pcmId}, #{cwriter}, #{ccontent}, now() )")
 	@Options(useGeneratedKeys = true, keyProperty = "cmId")
 	public int qna_commentOK(CommentTO to);
 
-	// qna 게시판 댓글 삭제 로직
+	// qna 게시판 댓글 삭제
 	@Delete("delete from qna_comment where pcmId=#{pcmId} and cmId=#{cmId}")
 	public int qna_commentDelete(CommentTO to);
 
-	// qna 게시판 댓글 수정 로직
+	// qna 게시판 댓글 수정
 	@Update("update qna_comment set ccontent=#{ccontent} where pcmId=#{pcmId} and cmId=#{cmId}")
 	public int qna_commentModify(CommentTO to);
+
+	// qna 게시판 게시글 삭제시 댓글도 같이 삭제 (qnaId == pcmId)
+	@Delete("delete from qna_comment where pcmId=#{pcmId}")
+	public void qna_BoardCommentDelete(String qnaId);
 
 }

@@ -30,9 +30,6 @@ const koreanRegExp = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 let idBox;
 let emailBox;
 
-
-
-
 $(document).ready(function() {
 	
 	// 아이디 비동기 처리 및 안내문구
