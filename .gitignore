@@ -4,7 +4,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 application.properties
-src/main/webapp/assets
 
 ### STS ###
 .apt_generated
@@ -33,3 +32,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Custom ###
+src/main/webapp/assets/
+src/main/webapp/resources/fileupload
