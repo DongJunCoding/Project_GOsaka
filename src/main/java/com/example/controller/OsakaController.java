@@ -98,8 +98,11 @@ public class OsakaController {
 		}
 
 		int skip = (cpage - 1) * recordPerPage;
+		System.out.println("skip : " + skip + ", cpage : " + cpage + ", recordPerPage : " + recordPerPage + ", osakaList.size() : " + osakaList.size());
+		
 		int endIndex = Math.min(skip + recordPerPage, osakaList.size());
-
+		System.out.println("endIndex : " + endIndex);
+		
 		ArrayList<OsakaAreaTO> pageList = new ArrayList<>(osakaList.subList(skip, endIndex));
 		pageTO.setPageList(pageList);
 
@@ -116,7 +119,6 @@ public class OsakaController {
 		modelAndView.addObject("pageTO", pageTO);
 
 		return modelAndView;
-
 	}
 
 	// 관광가이드 교토 리스트 페이지

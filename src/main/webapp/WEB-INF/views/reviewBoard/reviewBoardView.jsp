@@ -156,7 +156,6 @@ for (CommentTO commentTO : review_commentList) {
             </div>
         </div><!--End off Preloader -->
 
-
         <div class="culmn">
             <!--Home page style-->
             <nav class="navbar navbar-default bootsnav navbar-fixed no-background white">        
@@ -448,13 +447,12 @@ for (CommentTO commentTO : review_commentList) {
                     </div>
                 </div>
             </footer>
-
-<script>
-function toggleEditForm(commentId) {
-   var editForm = document.getElementById('editForm_' + commentId);
-   editForm.style.display = (editForm.style.display === 'none') ? 'block' : 'none';
-}
-</script>        
+		<script>
+		function toggleEditForm(commentId) {
+		   var editForm = document.getElementById('editForm_' + commentId);
+		   editForm.style.display = (editForm.style.display === 'none') ? 'block' : 'none';
+		}
+		</script>        
 
         <script src="assets/js/jquery.js"></script>
         <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>

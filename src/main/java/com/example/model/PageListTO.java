@@ -8,13 +8,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PageListTO {
-	private int cpage;
-	private int recordPerPage;
-	private int blockPerPage;
-	private int totalPage;
-	private int totalRecord;
+	private int cpage; // 페이지 번호
+	private int recordPerPage; // 한 페이지의 데이터 개수
+	private int blockPerPage; // 한 페이지에서 보일 페이지 개수 ( ex : < 1 2 3 4 5 > 이면 5로 설정된 것)
+	private int totalPage; // 전체 페이지
+	private int totalRecord; // 전체 데이터
 	private int startBlock;
-	private int endBlock;
+	private int endBlock; 
 
 	public PageListTO() {
 		this.cpage = 1;

@@ -381,11 +381,11 @@ String sessionNick = (String)session.getAttribute("nickname");
 				out.println("&nbsp;&nbsp;");
 				for (int i = startBlock; i <= endBlock; i++) {
 					if (i == cpage) {
-				// 해당 페이지에 [i] 돼있음.
-				out.println("<span><a>[" + i + "]</a></span>");
+						// 해당 페이지에 [i] 돼있음.
+						out.println("<span><a>[" + i + "]</a></span>");
 					} else {
-				// 페이지 번호들 나열해주고 해당 페이지의 데이터(게시글)들을 보여준다
-				out.println("<span><a href='/osakaList.do?cpage=" + i + "'>" + i + "</a></span>");
+						// 페이지 번호들 나열해주고 해당 페이지의 데이터(게시글)들을 보여준다
+						out.println("<span><a href='/osakaList.do?cpage=" + i + "'>" + i + "</a></span>");
 					}
 				}
 
@@ -421,11 +421,11 @@ String sessionNick = (String)session.getAttribute("nickname");
 				out.println("&nbsp;&nbsp;");
 				for (int i = startBlock; i <= endBlock; i++) {
 					if (i == cpage) {
-				// 해당 페이지에 [i] 돼있음.
-				out.println("<span><a>[" + i + "]</a></span>");
+						// 해당 페이지에 [i] 돼있음.
+						out.println("<span><a>[" + i + "]</a></span>");
 					} else {
-				// 페이지 번호들 나열해주고 해당 페이지의 데이터(게시글)들을 보여준다
-				out.println("<span><a href='/osakaList.do?cpage=" + i + "&searchWord="+searchWord+"'>" + i + "</a></span>");
+						// 페이지 번호들 나열해주고 해당 페이지의 데이터(게시글)들을 보여준다
+						out.println("<span><a href='/osakaList.do?cpage=" + i + "&searchWord="+searchWord+"'>" + i + "</a></span>");
 					}
 				}
 
