@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+body,
+html {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: #6f6f6f;
+}
+
+/* 왼쪽 버튼 색상이 바뀜 */
+h5 { font-size: 16px }
+p { font-size: 14px }
+a {
+    color: inherit;
+    transition: all 0.5s;
+}
+
+/* About Us */
+#tf-about { padding: 40px 0 }
+.gray-bg { background-color: #f3f3f3 }
+.img-wrap .profile-img {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+
+/* Why Us or Features Section */
+#tf-features,
+#feature { padding: 60px 0 }
+.features-content { padding: 0 30px 0 }
+.features-content h4 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #333333;
+}
+.nav.nav-pills > li > a {
+    position: relative;
+    display: block;
+    background-color: #ffffff;
+    padding: 25px;
+    border-bottom: 3px solid #cccccc;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.nav.nav-pills > li > a small {
+    text-transform: lowercase;
+    font-style: italic;
+}
+.nav.nav-pills > li > a:hover,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #E5B112;
+    padding: 25px;
+    border-bottom: 3px solid #996600;
+}
+.nav-pills > li > a { border-radius: 4px }
+ul.features li span.fa {
+    font-size: 35px;
+    vertical-align: middle;
+    margin-right: 20px;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+}
+
+
+.viewText {
+	text-align:left;
+}
